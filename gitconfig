@@ -1,0 +1,43 @@
+[user]
+  name = Panksy
+  email = panksy.creates@gmail.com
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  ui = auto
+[core]
+  editor = vim
+[alias]
+  stat = status
+  diffc = diff --cached
+  co = checkout
+  stsh = stash --keep-index
+  stasha = stash --all
+  first-commit = "rev-list --max-parents=0 HEAD"
+  last = log -1 HEAD
+  logs = log --pretty=format:'%C(yellow)%h%x09%Cred%ad%x09%Cblue%an%Cgreen%d%x09%Creset%s' --date=short
+  lol = log --graph --branches --pretty=oneline --decorate
+  # commit message
+  log-commit-msg = log --format=%B -n 1
+  # commit message and file details
+  log-commit-details = log --stat -n 1
+  history = log --follow
+  submodule-update = "!git submodule update --init --recursive"
+  untracked-files = ls-files -o --exclude-standard
+  ignored-files = ls-files --others -i --exclude-standard
+  modified-files = ls-files -m
+  delete-merged = "!git branch -D $(git branch --merged | grep -v '^*')"
+[fetch]
+  prune = true
+[push]
+  default = simple
+[pull]
+  rebase = false
+[branch]
+#  autosetuprebase = always
+
+[credential]
+  helper = osxkeychain
+
