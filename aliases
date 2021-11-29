@@ -1,8 +1,9 @@
 alias v='nvim'
 alias vim='nvim'
 
-alias l='ls -l'
-alias ll='ls -l'
-alias lla='ls -la'
+alias ls='ls -hF'
+alias l='ls -lhF'
+alias ll='ls -lhF'
+alias lla='ls -lahF'
 
 
